@@ -1,9 +1,20 @@
+"""
+INSTRUCTIONS:
+1. Ensure the data file 'ocel2-export.json' is in the same folder as this script.
+2. This script requires the following external libraries:
+   - pm4py
+   - networkx
+   - python-louvain (for community detection)
+
+   You can install them by running:
+   pip install pm4py networkx python-louvain
+"""
+
 import pm4py
 import networkx as nx
 import community.community_louvain as community_louvain
 import itertools
 import os
-import pandas as pd
 
 def get_golden_model_structure():
     """
@@ -265,4 +276,5 @@ if __name__ == "__main__":
             if interface:
                 print(f"  Interface:  {interface}  <-- Synchronizes with other modules")
             else:
+
                 print(f"  Interface:  []")
